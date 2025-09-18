@@ -2,17 +2,137 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Página de Matemáticas</title>
+  <title>Con las Manos y los Ojos</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fondo con emojis */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    .emoji {
+      position: fixed;
+      font-size: 2rem;
+      opacity: 0.1;
+      animation: flotar 10s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.1; }
+      50% { transform: translateY(50vh) rotate(180deg); opacity: 0.2; }
+      80% { opacity: 0.1; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #eee;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      color: #4a90e2;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .categoria {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .categoria:hover {
+      transform: scale(1.05);
+      background-color: #f0f8ff;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenido a la página de Matemáticas</h1>
+  <!-- Emojis flotantes -->
+  <div class="emoji" style="left:10%">👀</div>
+  <div class="emoji" style="left:30%">✋</div>
+  <div class="emoji" style="left:50%">👁️</div>
+  <div class="emoji" style="left:70%">🖐️</div>
+  <div class="emoji" style="left:90%">👁️</div>
+
+  <header>
+    <h1>Con las Manos y los Ojos</h1>
+    <p><em>"Quien puede pensar, es capaz de aprender. Usa tus manos y todo lo que tengas."</em></p>
+  </header>
+
   <nav>
     <ul>
       <li><a href="suma.html">Suma</a></li>
       <li><a href="resta.html">Resta</a></li>
     </ul>
   </nav>
+
+  <section class="categorias">
+    <div class="categoria">Sumas</div>
+    <div class="categoria">Restas</div>
+    <div class="categoria">Multiplicación</div>
+    <div class="categoria">División</div>
+    <div class="categoria">Juegos</div>
+    <div class="categoria">Estrategias</div>
+    <div class="categoria">Herramientas</div>
+    <div class="categoria">Actividades Interactivas</div>
+    <div class="categoria">Videos Didácticos</div>
+  </section>
+
+  <footer>
+    <p>Instituto para Sordos Santa Rosa</p>
+    <p>Creador: Miguel Ubiera</p>
+  </footer>
 </body>
 </html>
 
